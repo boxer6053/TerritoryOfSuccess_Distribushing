@@ -70,6 +70,52 @@
 			<key>DefaultValue</key>
 			<string>Matrix Soft</string>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Разработчики</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Новосельский Андрей</string>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Key</key>
+			<string>andrii</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Шадов Павел</string>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Key</key>
+			<string>pavel</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Засядьвовк Алексей</string>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Key</key>
+			<string>alex</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Ванжула Егор</string>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Key</key>
+			<string>egor</string>
+		</dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>
