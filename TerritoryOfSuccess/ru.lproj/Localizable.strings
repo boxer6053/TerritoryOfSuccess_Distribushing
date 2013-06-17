@@ -80,6 +80,7 @@
 "MakingOrderKey" = "Сделать заказ";
 "EnterYourPhoneNumberKey" = "Пожалуйста, введите свой номер телефона";
 "MoreThan0StarKey" = "Вы должны выбрать по крайней мере 1 звезду";
+"BonusesTitleKey" = "Бонусы";
 
 // Опросы
 "DownloadInquirersKey" = "Загрузка опросов";

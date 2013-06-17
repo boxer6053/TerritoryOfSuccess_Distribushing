@@ -37,6 +37,8 @@
 @property int sendingPrice;
 @property int sendingOffset;
 @property (strong, nonatomic) NSMutableArray *backIds;
+@property BOOL isButtonCloseAvailable;
+@property BOOL isSelectedItem;
 
 @end
 
@@ -48,6 +50,7 @@
 @synthesize categoriesList = _categoriesList;
 @synthesize subCategoriesList = _subCategoriesList;
 @synthesize selectedCategoryId = _selectedCategoryId;
+@synthesize isSelectedItem = _isSelectedItem;
 
 @synthesize sendingPrice = _sendingPrice;
 @synthesize sendingCategoryID = _sendingCategoryID;
@@ -60,6 +63,7 @@
 @synthesize sendingName = _sendingName;
 @synthesize sendingURL = _sendingURL;
 @synthesize sendingOffset   = _sendingOffset;
+@synthesize isButtonCloseAvailable = _isButtonCloseAvailable;
 
 - (MSAPI *)api
 {
@@ -94,6 +98,7 @@
     self.bonusCatalog.tableFooterView = footerView;
     self.bonusCatalog.tableFooterView.hidden = YES;
     self.bonusCatalog.tableFooterView.userInteractionEnabled = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,19 +123,34 @@
 //    else{
 //        [self.navigationBar.topItem setTitle:@""];
 //    }
-    if(self.backIds.count != 0){
-        
+    
+    
+    if(self.backIds.count != 0)
+    {
+        self.isButtonCloseAvailable = YES;
         NSInteger lastId = [[self.backIds objectAtIndex:(self.backIds.count-1)] integerValue];
         //[SVProgressHUD showWithStatus:NSLocalizedString(@"DownloadingInquirerListKey",nil)];
         [self.tableView setUserInteractionEnabled:NO];
         [self.api getBonusSubCategories:lastId withOffset:0];
         [self.tableView setUserInteractionEnabled:YES];
     }
-    else{
-        [self.tableView setUserInteractionEnabled:NO];
+    else
+    {
+        self.isButtonCloseAvailable = !self.isButtonCloseAvailable;
         [self.api getBonusSubCategories:0 withOffset:0];
         [self.tableView setUserInteractionEnabled:YES];
-        [self.backButton setEnabled:NO];
+//        [self.backButton setEnabled:NO];
+        
+//        [self.navigationController popViewControllerAnimated:YES];
+        
+//        self.navigationItem.leftBarButtonItem.enabled=NO;
+//        self.navigationItem.leftBarButtonItem=nil;
+//        self.navigationController.navigationBar.backItem.hidesBackButton=YES;
+        
+        if (self.isButtonCloseAvailable)
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     }
 }
 

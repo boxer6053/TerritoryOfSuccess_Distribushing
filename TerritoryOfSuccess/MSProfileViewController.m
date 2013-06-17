@@ -354,6 +354,7 @@
     if([segue.identifier isEqualToString:@"toBonusCatalog"])
     {
         [segue.destinationViewController setCategoriesList:self.catalogList];
+        [segue.destinationViewController setTitle:NSLocalizedString(@"BonusesTitleKey", nil)];
     }
 }
 

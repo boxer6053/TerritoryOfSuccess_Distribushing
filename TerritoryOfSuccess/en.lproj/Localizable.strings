@@ -83,6 +83,8 @@
 "MakingOrderKey" = "Making order";
 "EnterYourPhoneNumberKey" = "Please, enter your phone number";
 "MoreThan0StarKey" = "You shoud choose more than 1 star";
+"BonusesTitleKey" = "Bonuses";
+
 // Опросы
 "DownloadInquirersKey" = "Loading interogation";
 "DownloadInquirerDetailKey" = "Loading detail";
